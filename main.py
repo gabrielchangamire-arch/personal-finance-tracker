@@ -68,7 +68,16 @@ def handle_charts():
     plot_spending_by_category()
     plot_monthly_income_expense()
     plot_balance_over_time()
-    print("Done. Check the PNG files in the current directory.")
+    print("Done.")
+
+    show = input("Open charts now? (y/n): ").strip().lower()
+    if show == "y":
+        from PIL import Image
+        for name in ["spending_by_category.png", "monthly_income_expense.png", "balance_over_time.png"]:
+            try:
+                Image.open(name).show()
+            except Exception:
+                pass
 
 
 def handle_delete():
