@@ -1,5 +1,5 @@
 """
-Personal Finance Tracker — Streamlit web interface.
+Personal Finance Tracker - Streamlit web interface.
 
 Run:  streamlit run streamlit_app.py
 """

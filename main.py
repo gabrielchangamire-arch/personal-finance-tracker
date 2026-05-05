@@ -1,5 +1,5 @@
 """
-Personal Finance Tracker — CLI entry point.
+Personal Finance Tracker - CLI entry point.
 
 Run:  python main.py
 """
@@ -114,7 +114,7 @@ def main():
             print("Goodbye!")
             break
         else:
-            print("Invalid choice — enter 1-7.")
+            print("Invalid choice - enter 1-7.")
 
 
 if __name__ == "__main__":

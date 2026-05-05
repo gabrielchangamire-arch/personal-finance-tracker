@@ -1,5 +1,5 @@
 """
-Personal Finance Tracker — core data logic.
+Personal Finance Tracker - core data logic.
 
 Stores transactions in a local JSON file and provides helpers
 for adding, listing, filtering, and summarising spend by category.
@@ -85,7 +85,7 @@ def get_summary() -> dict:
 
     Returns a dict with:
       total_income, total_expenses, net_balance,
-      by_category  — {category: sum}
+      by_category  - {category: sum}
     """
     transactions = _load_transactions()
     total_income = sum(t["amount"] for t in transactions if t["amount"] > 0)

@@ -1,5 +1,5 @@
 """
-Personal Finance Tracker — visualisation module.
+Personal Finance Tracker - visualisation module.
 
 Generates spending-by-category pie chart, monthly income-vs-expense
 bar chart, and a cumulative balance line chart using matplotlib.
@@ -19,7 +19,7 @@ def plot_spending_by_category(save_path: str = "spending_by_category.png") -> st
     spending = {k: abs(v) for k, v in summary["by_category"].items() if v < 0}
 
     if not spending:
-        print("No expenses recorded yet — nothing to plot.")
+        print("No expenses recorded yet - nothing to plot.")
         return ""
 
     fig, ax = plt.subplots(figsize=(8, 6))
@@ -37,7 +37,7 @@ def plot_monthly_income_expense(save_path: str = "monthly_income_expense.png") -
     """Grouped bar chart: income vs expenses for each month."""
     transactions = list_transactions()
     if not transactions:
-        print("No transactions recorded yet — nothing to plot.")
+        print("No transactions recorded yet - nothing to plot.")
         return ""
 
     monthly_income: dict[str, float] = defaultdict(float)
@@ -76,7 +76,7 @@ def plot_balance_over_time(save_path: str = "balance_over_time.png") -> str:
     """Line chart of cumulative balance ordered by date."""
     transactions = list_transactions()
     if not transactions:
-        print("No transactions recorded yet — nothing to plot.")
+        print("No transactions recorded yet - nothing to plot.")
         return ""
 
     sorted_txns = sorted(transactions, key=lambda t: t["date"])
